@@ -16,11 +16,18 @@
     <meta name="twitter:description" content="Join TikTok now and enjoy rewards, coupons, and a refreshed experience!" />
     <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=TikTok+Comeback" />
 
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16899613787"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16899613787');
+    </script>
+
     <!-- Google Font & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
-    <!-- Google Tag (gtag.js) and Outbound Event Snippet can be inserted here if needed -->
 
     <style>
       /* CSS Variables for consistency */
@@ -208,11 +215,10 @@
         line-height: 1.5;
       }
       
-      /* Bottom Emblem Section: Ensuring it is always centered */
+      /* New Bottom Emblem Section: Using the header image (download.png) */
       .bottom-emblem {
-        width: 100%;
-        text-align: center;
         margin: 20px 0;
+        text-align: center;  /* Ensure content is centered */
       }
       .emblem-image {
         width: 100px;
@@ -287,7 +293,7 @@
           />
           <h1>TikTok is Back &amp; Better Than Ever!</h1>
           <p>Experience a fresh start on TikTok with new rewards and exciting features designed just for you.</p>
-          <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button">Join Now</a>
+          <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16899613787/sHvbCIKJlKQaENvIrvo-', 'value': 1.0, 'currency': 'USD'});">Join Now</a>
         </div>
       </main>
       
@@ -302,7 +308,7 @@
           </p>
           <div class="reward-cta">
             <p class="reward-amount">$8</p>
-            <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button">Join Now</a>
+            <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16899613787/sHvbCIKJlKQaENvIrvo-', 'value': 1.0, 'currency': 'USD'});">Join Now</a>
             <p class="terms">
               By tapping "Join now", you confirm that you have read and agree to our TikTok Rewards Terms and Conditions.
             </p>
