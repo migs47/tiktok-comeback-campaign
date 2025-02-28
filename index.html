@@ -206,6 +206,18 @@
         line-height: 1.5;
       }
       
+      /* New Bottom Emblem Section */
+      .bottom-emblem {
+        margin: 20px 0;
+      }
+      .emblem-image {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+      
       /* Footer */
       footer {
         background: var(--bg-dark);
@@ -213,58 +225,6 @@
         text-align: center;
         box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
         font-size: 0.9em;
-      }
-      
-      /* Modal Subscription Box */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.8);
-        align-items: center;
-        justify-content: center;
-      }
-      .modal-content {
-        background: #282828;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 400px;
-        width: 90%;
-        text-align: center;
-        animation: modalAnim 0.5s ease-out;
-      }
-      @keyframes modalAnim {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      .modal-content .close {
-        color: var(--text-light);
-        float: right;
-        font-size: 1.5em;
-        cursor: pointer;
-      }
-      .modal-content input[type="email"] {
-        padding: 10px;
-        width: 80%;
-        margin: 15px 0;
-        border: none;
-        border-radius: 4px;
-      }
-      .modal-content button {
-        padding: 10px 20px;
-        background: var(--primary-color);
-        border: none;
-        border-radius: 4px;
-        color: var(--text-light);
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .modal-content button:hover {
-        background: var(--secondary-color);
       }
       
       /* Media Query for Mobile adjustments */
@@ -324,7 +284,7 @@
           />
           <h1>TikTok is Back &amp; Better Than Ever!</h1>
           <p>Experience a fresh start on TikTok with new rewards and exciting features designed just for you.</p>
-          <a href="javascript:void(0)" class="cta-button" id="openModal">Join Now</a>
+          <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button">Join Now</a>
         </div>
       </main>
       
@@ -339,7 +299,7 @@
           </p>
           <div class="reward-cta">
             <p class="reward-amount">$8</p>
-            <a href="javascript:void(0)" class="cta-button" id="openModal2">Join Now</a>
+            <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button">Join Now</a>
             <p class="terms">
               By tapping "Join now", you confirm that you have read and agree to our TikTok Rewards Terms and Conditions.
             </p>
@@ -375,6 +335,11 @@
         </div>
       </section>
       
+      <!-- New Bottom Emblem Section -->
+      <div class="bottom-emblem container">
+        <img src="images/download-1.png" alt="TikTok Emblem" class="emblem-image" />
+      </div>
+      
       <!-- Footer -->
       <footer>
         <div class="container">
@@ -383,40 +348,6 @@
       </footer>
     </div>
     
-    <!-- Modal Subscription Box -->
-    <div class="modal" id="subscribeModal">
-      <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2>Subscribe for Updates</h2>
-        <p>Enter your email to get the latest rewards and TikTok news.</p>
-        <input type="email" placeholder="Your Email" />
-        <br>
-        <button id="subscribeBtn">Subscribe</button>
-      </div>
-    </div>
-    
-    <script>
-      // Modal functionality for both CTA buttons
-      const openModalBtns = document.querySelectorAll('#openModal, #openModal2');
-      const closeModal = document.getElementById('closeModal');
-      const modal = document.getElementById('subscribeModal');
-      
-      openModalBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          modal.style.display = 'flex';
-        });
-      });
-      
-      closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-      
-      window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    </script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
