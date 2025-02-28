@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
+    <!-- Google Tag (gtag.js) and Outbound Event Snippet can be inserted here if needed -->
+
     <style>
       /* CSS Variables for consistency */
       :root {
@@ -206,16 +208,17 @@
         line-height: 1.5;
       }
       
-      /* New Bottom Emblem Section: Use the other image (download.png) */
+      /* Bottom Emblem Section: Ensuring it is always centered */
       .bottom-emblem {
+        width: 100%;
+        text-align: center;
         margin: 20px 0;
       }
       .emblem-image {
         width: 100px;
         height: auto;
         border-radius: 50%;
-        display: block;
-        margin: 0 auto;
+        display: inline-block;
       }
       
       /* Footer */
@@ -335,8 +338,8 @@
         </div>
       </section>
       
-      <!-- Bottom Emblem Section: Using the other image (download.png) -->
-      <div class="bottom-emblem container">
+      <!-- Bottom Emblem Section: Using the header image (download.png) -->
+      <div class="bottom-emblem">
         <img src="images/download.png" alt="TikTok Emblem" class="emblem-image" />
       </div>
       
