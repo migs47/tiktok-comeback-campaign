@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>TikTok is Back &amp; Better Than Ever!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph / Twitter Meta Tags -->
+    <meta property="og:title" content="TikTok is Back &amp; Better Than Ever!" />
+    <meta property="og:description" content="Join TikTok now and enjoy rewards, coupons, and a refreshed experience!" />
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=TikTok+Comeback" />
+    <meta property="og:url" content="https://www.yourcampaignsite.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TikTok is Back &amp; Better Than Ever!" />
+    <meta name="twitter:description" content="Join TikTok now and enjoy rewards, coupons, and a refreshed experience!" />
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=TikTok+Comeback" />
+
+    <!-- Google Font & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <style>
+      /* CSS Variables for consistency */
+      :root {
+        --primary-color: #ff0055;
+        --secondary-color: #ff6688;
+        --accent-color: #ffe6ec;
+        --bg-dark: #1a1a1a;
+        --bg-overlay: rgba(0, 0, 0, 0.5);
+        --text-light: #f0f0f0;
+      }
+      /* Global Reset */
+      * { box-sizing: border-box; }
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-light);
+      }
+      a { text-decoration: none; color: inherit; }
+      
+      /* Container for centered content */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      /* Header: includes small TikTok logo next to the site title */
+      header {
+        background: var(--bg-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      }
+      .title {
+        font-size: 2em;
+        font-weight: 600;
+      }
+      .logo-image {
+        width: 60px;
+        height: auto;
+        background: transparent;
+      }
+      
+      /* Hero Section with Video Background */
+      .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: var(--text-light);
+      }
+      #bgVideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        z-index: -2;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+      .overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: var(--bg-overlay);
+        z-index: -1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 0 20px;
+        text-align: center;
+      }
+      /* Alternate logo now 200% larger (300px width) and placed above headline */
+      .tiktok-hero-logo {
+        display: block;
+        width: 300px;
+        margin: 0 auto 20px auto;
+        background: transparent;
+      }
+      .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      }
+      .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .cta-button {
+        background: var(--bg-dark);
+        color: var(--text-light);
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        display: inline-block;
+      }
+      .cta-button:hover {
+        transform: scale(1.05);
+        background: var(--accent-color);
+        color: var(--primary-color);
+      }
+      
+      /* Rewards Section */
+      .reward-info {
+        background: #282828;
+        padding: 40px 20px;
+      }
+      .reward-info h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+      }
+      .reward-info p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .reward-cta {
+        margin-top: 20px;
+      }
+      .reward-amount {
+        font-size: 2.5em;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 10px 0;
+      }
+      .reward-cta .terms {
+        font-size: 0.9em;
+        margin-top: 10px;
+        color: #ccc;
+      }
+      
+      /* How It Works Section */
+      .how-it-works {
+        background: #1f1f1f;
+        padding: 40px 20px;
+      }
+      .how-it-works h2 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+      }
+      .steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .step {
+        background: #282828;
+        border-radius: 8px;
+        padding: 20px;
+        flex: 1 1 300px;
+        max-width: 320px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      }
+      .step h3 {
+        font-size: 2em;
+        margin: 0;
+        color: var(--primary-color);
+      }
+      .step p {
+        font-size: 1em;
+        margin-top: 15px;
+        line-height: 1.5;
+      }
+      
+      /* Footer */
+      footer {
+        background: var(--bg-dark);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
+        font-size: 0.9em;
+      }
+      
+      /* Modal Subscription Box */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-content {
+        background: #282828;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 90%;
+        text-align: center;
+        animation: modalAnim 0.5s ease-out;
+      }
+      @keyframes modalAnim {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .modal-content .close {
+        color: var(--text-light);
+        float: right;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+      .modal-content input[type="email"] {
+        padding: 10px;
+        width: 80%;
+        margin: 15px 0;
+        border: none;
+        border-radius: 4px;
+      }
+      .modal-content button {
+        padding: 10px 20px;
+        background: var(--primary-color);
+        border: none;
+        border-radius: 4px;
+        color: var(--text-light);
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .modal-content button:hover {
+        background: var(--secondary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page-container">
+      <!-- Header with first TikTok logo -->
+      <header>
+        <img 
+          src="images/download.png" 
+          alt="TikTok Logo" 
+          class="logo-image" 
+        />
+        <div class="title">TikTok Comeback Campaign</div>
+      </header>
+      
+      <!-- Hero Section -->
+      <main class="hero">
+        <video autoplay muted loop id="bgVideo">
+          <source src="assets/videos/bg.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content container">
+          <!-- Alternate logo enlarged and now 200% larger (300px width) placed above headline -->
+          <img 
+            src="images/download-1.png" 
+            alt="TikTok Alternate Logo" 
+            class="tiktok-hero-logo" 
+          />
+          <h1>TikTok is Back &amp; Better Than Ever!</h1>
+          <p>Experience a fresh start on TikTok with new rewards and exciting features designed just for you.</p>
+          <a href="javascript:void(0)" class="cta-button" id="openModal">Join Now</a>
+        </div>
+      </main>
+      
+      <!-- Rewards Details Section -->
+      <section class="reward-info">
+        <div class="container">
+          <h2>Get Rewarded on TikTok</h2>
+          <p>
+            Join TikTok and get $8 in rewards if you are a new user who downloads TikTok for the 1st time!
+            Redeem your rewards for TikTok Shop coupons with no minimum spend.
+            You can also invite friends and get even more rewards.
+          </p>
+          <div class="reward-cta">
+            <p class="reward-amount">$8</p>
+            <a href="javascript:void(0)" class="cta-button" id="openModal2">Join Now</a>
+            <p class="terms">
+              By tapping "Join now", you confirm that you have read and agree to our TikTok Rewards Terms and Conditions.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="container">
+          <h2>How It Works</h2>
+          <div class="steps">
+            <div class="step">
+              <h3>01</h3>
+              <p>Download TikTok and create a new account.</p>
+            </div>
+            <div class="step">
+              <h3>02</h3>
+              <p>
+                If you're a new user who hasn't downloaded TikTok, you will get a $8 TikTok Shop coupon with no minimum spend.
+                Visit the rewards page within 24 hours of signing up by tapping the profile gift icon.
+                TikTok Shop coupons apply to all product categories, including Electronics, Clothing, Beauty, and more.
+              </p>
+            </div>
+            <div class="step">
+              <h3>03</h3>
+              <p>
+                Complete tasks to get rewards and redeem them for TikTok Shop coupons.
+                You must be at least 18 years old and must not have a TikTok account to be eligible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <p>&copy; 2025 TikTok Comeback Campaign. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Modal Subscription Box -->
+    <div class="modal" id="subscribeModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Subscribe for Updates</h2>
+        <p>Enter your email to get the latest rewards and TikTok news.</p>
+        <input type="email" placeholder="Your Email" />
+        <br>
+        <button id="subscribeBtn">Subscribe</button>
+      </div>
+    </div>
+    
+    <script>
+      // Modal functionality for both CTA buttons
+      const openModalBtns = document.querySelectorAll('#openModal, #openModal2');
+      const closeModal = document.getElementById('closeModal');
+      const modal = document.getElementById('subscribeModal');
+      
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      });
+      
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+      
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    </script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
