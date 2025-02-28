@@ -72,7 +72,7 @@
       /* Hero Section with Video Background */
       .hero {
         position: relative;
-        height: 70vh;  /* Reduced from 100vh to 70vh */
+        height: 70vh;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -103,10 +103,10 @@
         padding: 0 20px;
         text-align: center;
       }
-      /* Alternate logo now 200% larger and above the headline */
+      /* Alternate logo 200% larger (300px width) on desktop, above headline */
       .tiktok-hero-logo {
         display: block;
-        width: 300px;  /* 200% larger than previous 150px */
+        width: 300px;
         margin: 0 auto 20px auto;
         background: transparent;
       }
@@ -267,16 +267,22 @@
         background: var(--secondary-color);
       }
       
-      /* Media Query for Mobile (if needed) */
+      /* Media Query for Mobile adjustments */
       @media (max-width: 600px) {
         .hero {
-          height: 60vh;
+          height: 50vh;
         }
         .hero h1 {
-          font-size: 2.5em;
+          font-size: 2em;
+          margin-bottom: 10px;
         }
         .hero p {
-          font-size: 1em;
+          font-size: 0.9em;
+          margin-bottom: 20px;
+        }
+        .tiktok-hero-logo {
+          width: 80px;
+          margin-bottom: 5px;
         }
       }
     </style>
@@ -301,7 +307,7 @@
         </video>
         <div class="overlay"></div>
         <div class="hero-content container">
-          <!-- Alternate logo enlarged and placed above headline -->
+          <!-- Alternate logo enlarged on desktop, shrinks on mobile -->
           <img 
             src="images/download-1.png" 
             alt="TikTok Alternate Logo" 
