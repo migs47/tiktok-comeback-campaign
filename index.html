@@ -16,22 +16,13 @@
     <meta name="twitter:description" content="Join TikTok now and enjoy rewards, coupons, and a refreshed experience!" />
     <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=TikTok+Comeback" />
 
-    <!-- New Event Snippet for Sign-up Conversion -->
-    <!-- Event snippet for Sign-up conversion page
-         In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16899613787"></script>
     <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-          'send_to': 'AW-16899613787/f6qpCPmtrKQaENvIrvo-',
-          'event_callback': callback
-        });
-        return false;
-      }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16899613787');
     </script>
 
     <!-- Google Font & Font Awesome -->
@@ -121,7 +112,7 @@
         padding: 0 20px;
         text-align: center;
       }
-      /* Alternate logo 200% larger (300px width) on desktop, placed above headline */
+      /* Alternate logo 200% larger (300px width) on desktop, above headline */
       .tiktok-hero-logo {
         display: block;
         width: 300px;
@@ -302,7 +293,7 @@
           />
           <h1>TikTok is Back &amp; Better Than Ever!</h1>
           <p>Experience a fresh start on TikTok with new rewards and exciting features designed just for you.</p>
-          <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button" onclick="return gtag_report_conversion('https://www.tiktok.com/t/ZT2umSf5e/');">Join Now</a>
+          <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16899613787/sHvbCIKJlKQaENvIrvo-', 'value': 1.0, 'currency': 'USD'});">Join Now</a>
         </div>
       </main>
       
@@ -317,7 +308,7 @@
           </p>
           <div class="reward-cta">
             <p class="reward-amount">$8</p>
-            <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button" onclick="return gtag_report_conversion('https://www.tiktok.com/t/ZT2umSf5e/');">Join Now</a>
+            <a href="https://www.tiktok.com/t/ZT2umSf5e/" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16899613787/sHvbCIKJlKQaENvIrvo-', 'value': 1.0, 'currency': 'USD'});">Join Now</a>
             <p class="terms">
               By tapping "Join now", you confirm that you have read and agree to our TikTok Rewards Terms and Conditions.
             </p>
